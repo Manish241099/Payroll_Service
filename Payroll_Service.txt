@@ -86,5 +86,3 @@ mysql> select * from employee_payroll;
 |   10 | Nihar   |  45000 | 2019-10-07 |
 +------+---------+--------+------------+
 10 rows in set (0.00 sec)
-
-mysql>
