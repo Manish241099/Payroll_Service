@@ -164,3 +164,13 @@ mysql> select * from employee_payroll;
 |    9 | Anjali  |  50000 | 2023-07-26 | 22   |
 |   10 | Nihar   |  45000 | 2019-10-07 | 23   |
 +------+---------+--------+------------+------+
+
+
+mysql> SELECT COUNT(salary),gender from employee_payroll GROUP BY gender;
++---------------+--------+
+| COUNT(salary) | gender |
++---------------+--------+
+|             7 | male   |
+|             3 | Female |
++---------------+--------+
+2 rows in set (0.02 sec)
