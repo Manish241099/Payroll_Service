@@ -105,3 +105,62 @@ mysql> SELECT *
 |    9 | Anjali |  50000 | 2023-07-26 |
 +------+--------+--------+------------+
 3 rows in set (0.00 sec)
+    -> ^C
+mysql> UPDATE employee_payroll set Age = 20 WHERE name='Manish';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 23 WHERE name='Anwar';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> ^C
+mysql>  UPDATE employee_payroll set Age = 18 WHERE name='Swapnil';
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 24 WHERE name='Vedant';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 25 WHERE name='Tushar';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 23 WHERE name='Saniya';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 16 WHERE name='Nitish';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 22 WHERE name='Anjali';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  UPDATE employee_payroll set Age = 23 WHERE name='Nihar';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+10 rows in set (0.00 sec)
+
+mysql>  UPDATE employee_payroll set Age = 25 WHERE name='Smital';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from employee_payroll;
++------+---------+--------+------------+------+
+| id   | name    | salary | start_date | Age  |
++------+---------+--------+------------+------+
+|    1 | Manish  |  10000 | 2021-10-24 | 20   |
+|    2 | Smital  |  50000 | 2020-05-21 | 25   |
+|    3 | Anwar   |  30000 | 2022-06-05 | 23   |
+|    4 | Swapnil |  10000 | 2018-12-14 | 18   |
+|    5 | Vedant  |  20000 | 2019-09-01 | 24   |
+|    6 | Tushar  |  40000 | 2019-09-01 | 25   |
+|    7 | Saniya  |  80000 | 2011-11-11 | 23   |
+|    8 | Nitish  |  20000 | 2020-02-07 | 16   |
+|    9 | Anjali  |  50000 | 2023-07-26 | 22   |
+|   10 | Nihar   |  45000 | 2019-10-07 | 23   |
++------+---------+--------+------------+------+
