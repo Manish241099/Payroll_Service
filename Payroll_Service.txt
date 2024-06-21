@@ -187,3 +187,32 @@ mysql> ALTER TABLE employee_payroll
     -> ADD CONSTRAINT chk_phone CHECK (phone REGEXP '^[0-9]{10}$');
 Query OK, 10 rows affected (0.08 sec)
 Records: 10  Duplicates: 0  Warnings: 0
+mysql> ALTER TABLE employee_payroll
+    -> ADD COLUMN Basic_Pay VARCHAR(255),
+    -> ADD COLUMN Deduction VARCHAR(255),
+    -> ADD COLUMN Taxable_Pay VARCHAR(255),
+    -> ADD COLUMN Income_Tax VARCHAR(255),
+    -> ADD COLUMN Net_Pay VARCHAR(255);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee_payroll;
++------+---------+--------+------------+------+--------+-------+-----------------+------------+-----------+-----------+-------------+------------+---------+
+| id   | name    | salary | start_date | Age  | Gender | phone | address         | department | Basic_Pay | Deduction | Taxable_Pay | Income_Tax | Net_Pay |
++------+---------+--------+------------+------+--------+-------+-----------------+------------+-----------+-----------+-------------+------------+---------+
+|    1 | Manish  |  10000 | 2021-10-24 | 20   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    2 | Smital  |  50000 | 2020-05-21 | 25   | Female | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    3 | Anwar   |  30000 | 2022-06-05 | 23   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    4 | Swapnil |  10000 | 2018-12-14 | 18   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    5 | Vedant  |  20000 | 2019-09-01 | 24   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    6 | Tushar  |  40000 | 2019-09-01 | 25   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    7 | Saniya  |  80000 | 2011-11-11 | 23   | Female | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    8 | Nitish  |  20000 | 2020-02-07 | 16   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|    9 | Anjali  |  50000 | 2023-07-26 | 22   | Female | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
+|   10 | Nihar   |  45000 | 2019-10-07 | 23   | male   | NULL  | Unknown Address |            | NULL      | NULL      | NULL        | NULL       | NULL    |
++------+---------+--------+------------+------+--------+-------+-----------------+------------+-----------+-----------+-------------+------------+---------+
+10 rows in set (0.00 sec)
+
+mysql>
+
+
