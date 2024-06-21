@@ -174,3 +174,16 @@ mysql> SELECT COUNT(salary),gender from employee_payroll GROUP BY gender;
 |             3 | Female |
 +---------------+--------+
 2 rows in set (0.02 sec)
+
+Database changed
+mysql> ALTER TABLE employee_payroll
+    -> ADD COLUMN phone VARCHAR(15),
+    -> ADD COLUMN address VARCHAR(255) DEFAULT 'Unknown Address',
+    -> ADD COLUMN department VARCHAR(100) NOT NULL;
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE employee_payroll
+    -> ADD CONSTRAINT chk_phone CHECK (phone REGEXP '^[0-9]{10}$');
+Query OK, 10 rows affected (0.08 sec)
+Records: 10  Duplicates: 0  Warnings: 0
